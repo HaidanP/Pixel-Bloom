@@ -35,16 +35,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-black">
       {/* Header */}
-      <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
+      <div className="bg-black border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold text-white mb-2">
                 Diffusion Model Simulation
               </h1>
-              <p className="text-purple-200">
+              <p className="text-gray-400">
                 Interactive exploration of how AI generates images through diffusion processes
               </p>
             </div>
@@ -53,7 +53,7 @@ function App() {
       </div>
 
       {/* Navigation Tabs */}
-      <div className="bg-black/10 backdrop-blur-sm border-b border-white/5">
+      <div className="bg-black border-b border-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex overflow-x-auto">
             {tabs.map((tab) => {
@@ -64,8 +64,8 @@ function App() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center space-x-3 px-6 py-4 border-b-2 transition-all whitespace-nowrap ${
                     activeTab === tab.id
-                      ? 'border-purple-400 text-purple-300 bg-purple-500/10'
-                      : 'border-transparent text-slate-400 hover:text-purple-300 hover:bg-purple-500/5'
+                      ? 'border-white text-white bg-gray-800'
+                      : 'border-transparent text-gray-500 hover:text-white hover:bg-gray-900'
                   }`}
                 >
                   <IconComponent size={20} />
